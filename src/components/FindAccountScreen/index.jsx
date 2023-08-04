@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import Footer from '../footer';
+import MainFooter from '../MainFooter';
 
-const LoginSec = styled.div`
+const FindSec = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -46,36 +46,42 @@ const Button = styled.button`
   background-color: #0d4d5d;
   border: none;
   color: #ffffff;
-  font-size: 30px;
+  font-size: 26px;
   padding: 10px 60px 10px 60px;
   border-radius: 10px;
-  width: 270px;
-  margin-top: 20px;
+  width: 320px;
+  margin-top: 50px;
+  margin-bottom: 100px;
 `;
 
-const Label = styled.h1`
+const Header = styled.h1`
+  font-weight: bold;
+  font-size: 24px;
+  color: #0d4d5d;
+  padding: 30px 200px 0px 200px;
+`;
+
+const Text = styled.p`
   font-size: 16px;
   color: #0d4d5d;
-  margin-bottom: 50px;
-  padding: 30px 200px 30px 200px;
-  border-bottom: solid 1px #0d4d5d;
+  padding: 30px 50px;
 `;
 
-const Login = () => {
+export default function FindAccountScreen() {
   return (
-    <LoginSec>
+    <FindSec>
       <Section>
         <Form>
+          <Header>Find your account</Header>
+          <Text>
+            PLEASE, ENTER YOUR EMAIL ASSOCIATED WITH YOUR ACCOUNT SO WE CAN
+            REESTABLISH YOUR PASSWORD
+          </Text>
           <Input placeholder='email@example.com'></Input>
-          <Input type='password' placeholder='password'></Input>
-          <Button>LOGIN</Button>
-          <Label>FORGOT PASSWORD?</Label>
-          <Button>SIGN-UP</Button>
+          <Button>SEND EMAIL</Button>
         </Form>
       </Section>
-      <Footer />
-    </LoginSec>
+      <MainFooter />
+    </FindSec>
   );
-};
-
-export default Login;
+}

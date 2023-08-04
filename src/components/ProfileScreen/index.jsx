@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import Header from '../Header';
-import Footer from '../Footer';
+import Header from '../MainHeaderSection';
+import Footer from '../MainFooterSection';
 
 const Main = styled.div`
   height: 82vh;
@@ -19,7 +19,7 @@ const ProfileImg = styled.img`
   border-radius: 50%;
 `;
 
-const Profile = () => {
+export default function ProfileScreen() {
   return (
     <div>
       <Header />
@@ -31,6 +31,4 @@ const Profile = () => {
       <Footer />
     </div>
   );
-};
-
-export default Profile;
+}

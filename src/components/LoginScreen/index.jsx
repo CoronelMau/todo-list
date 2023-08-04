@@ -46,35 +46,34 @@ const Button = styled.button`
   background-color: #0d4d5d;
   border: none;
   color: #ffffff;
-  font-size: 26px;
+  font-size: 30px;
   padding: 10px 60px 10px 60px;
   border-radius: 10px;
   width: 270px;
-  margin-top: 50px;
-  margin-bottom: 100px;
+  margin-top: 20px;
 `;
 
-const Header = styled.h1`
-  font-weight: bold;
-  font-size: 24px;
+const Label = styled.h1`
+  font-size: 16px;
   color: #0d4d5d;
-  padding: 30px 200px 50px 200px;
+  margin-bottom: 50px;
+  padding: 30px 200px 30px 200px;
+  border-bottom: solid 1px #0d4d5d;
 `;
 
-const ChangePwd = () => {
+export default function LoginScreen() {
   return (
     <LoginSec>
       <Section>
         <Form>
-          <Header>Change Password</Header>
-          <Input placeholder='new password'></Input>
-          <Input placeholder='repeat password'></Input>
-          <Button>SAVE</Button>
+          <Input placeholder='email@example.com'></Input>
+          <Input type='password' placeholder='password'></Input>
+          <Button>LOGIN</Button>
+          <Label>FORGOT PASSWORD?</Label>
+          <Button>SIGN-UP</Button>
         </Form>
       </Section>
       <Footer />
     </LoginSec>
   );
-};
-
-export default ChangePwd;
+}

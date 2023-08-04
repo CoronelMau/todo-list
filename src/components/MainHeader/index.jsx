@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const MainHeader = styled.header`
+const Header = styled.header`
   height: 8vh;
   background-color: #0d4d5d;
   font-family: 'Montserrat', sans-serif;
@@ -27,14 +27,12 @@ const ProfileImg = styled.img`
   height: 50px;
 `;
 
-const Header = () => {
+export default function MainHeader() {
   return (
-    <MainHeader>
+    <Header>
       <MainTitle>Todo - List</MainTitle>
       <Input placeholder='search' />
       <ProfileImg src='https://github.com/CoronelMau.png' />
-    </MainHeader>
+    </Header>
   );
-};
-
-export default Header;
+}

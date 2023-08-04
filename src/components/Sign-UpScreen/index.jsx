@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import Footer from '../footer';
 
-const FindSec = styled.div`
+const SignUpSec = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -46,44 +46,26 @@ const Button = styled.button`
   background-color: #0d4d5d;
   border: none;
   color: #ffffff;
-  font-size: 26px;
+  font-size: 30px;
   padding: 10px 60px 10px 60px;
   border-radius: 10px;
-  width: 320px;
-  margin-top: 50px;
-  margin-bottom: 100px;
+  width: 270px;
+  margin-top: 70px;
 `;
 
-const Header = styled.h1`
-  font-weight: bold;
-  font-size: 24px;
-  color: #0d4d5d;
-  padding: 30px 200px 0px 200px;
-`;
-
-const Text = styled.p`
-  font-size: 16px;
-  color: #0d4d5d;
-  padding: 30px 50px;
-`;
-
-const FindAccount = () => {
+export default function SignUpScreen() {
   return (
-    <FindSec>
+    <SignUpSec>
       <Section>
         <Form>
-          <Header>Find your account</Header>
-          <Text>
-            PLEASE, ENTER YOUR EMAIL ASSOCIATED WITH YOUR ACCOUNT SO WE CAN
-            REESTABLISH YOUR PASSWORD
-          </Text>
+          <Input placeholder='name'></Input>
           <Input placeholder='email@example.com'></Input>
-          <Button>SEND EMAIL</Button>
+          <Input type='password' placeholder='password'></Input>
+          <Input type='password' placeholder='repeat password'></Input>
+          <Button>SIGN-UP</Button>
         </Form>
       </Section>
       <Footer />
-    </FindSec>
+    </SignUpSec>
   );
-};
-
-export default FindAccount;
+}

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const MainFooter = styled.footer`
+const Footer = styled.footer`
   display: flex;
   flex-direction: column;
   font-family: 'Montserrat', sans-serif;
@@ -18,13 +18,11 @@ const Label = styled.h1`
   font-size: 15px;
 `;
 
-const Footer = () => {
+export default function MainFooter() {
   return (
-    <MainFooter>
+    <Footer>
       <Logo src='./Logo.png' />
       <Label>Coronel</Label>
-    </MainFooter>
+    </Footer>
   );
-};
-
-export default Footer;
+}

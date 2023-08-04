@@ -54,7 +54,7 @@ const Plus = styled.img`
   height: 50px;
 `;
 
-const MainPage = () => {
+export default function MainPageScreen() {
   return (
     <div>
       <Header />
@@ -85,6 +85,4 @@ const MainPage = () => {
       <Footer />
     </div>
   );
-};
-
-export default MainPage;
+}
