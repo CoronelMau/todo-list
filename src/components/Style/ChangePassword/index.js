@@ -1,7 +1,6 @@
-import styled from 'styled-components';
-import Footer from '../MainFooterSection';
+import styled from "styled-components";
 
-const LoginSec = styled.div`
+export const LoginSec = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -9,7 +8,7 @@ const LoginSec = styled.div`
   font-family: 'Montserrat', sans-serif;
 `;
 
-const Section = styled.div`
+export const Section = styled.div`
   font-weight: lighter;
   display: flex;
   justify-content: center;
@@ -17,7 +16,7 @@ const Section = styled.div`
   min-height: 90vh;
 `;
 
-const Form = styled.form`
+export const Form = styled.form`
   background-color: #b1cdd8;
   display: flex;
   flex-direction: column;
@@ -29,7 +28,7 @@ const Form = styled.form`
   padding-bottom: 50px;
 `;
 
-const Input = styled.input`
+export const Input = styled.input`
   font-family: 'Montserrat', sans-serif;
   box-sizing: border-box;
   border: none;
@@ -41,7 +40,7 @@ const Input = styled.input`
   width: 570px;
 `;
 
-const Button = styled.button`
+export const Button = styled.button`
   font-family: 'Montserrat', sans-serif;
   background-color: #0d4d5d;
   border: none;
@@ -54,25 +53,9 @@ const Button = styled.button`
   margin-bottom: 100px;
 `;
 
-const Header = styled.h1`
+export const Header = styled.h1`
   font-weight: bold;
   font-size: 24px;
   color: #0d4d5d;
   padding: 30px 200px 50px 200px;
 `;
-
-export default function ChangingPasswordScreen() {
-  return (
-    <LoginSec>
-      <Section>
-        <Form>
-          <Header>Change Password</Header>
-          <Input placeholder='new password'></Input>
-          <Input placeholder='repeat password'></Input>
-          <Button>SAVE</Button>
-        </Form>
-      </Section>
-      <Footer />
-    </LoginSec>
-  );
-}
