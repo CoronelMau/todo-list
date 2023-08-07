@@ -18,7 +18,7 @@ export const Input = styled.input`
   font-size: 18px;
   border: none;
   font-family: 'Montserrat', sans-serif;
-  padding: 5px 400px 5px 20px;
+  padding: 5px 300px 5px 20px;
   border-radius: 20px;
 `;
 

@@ -3,7 +3,7 @@
 // import FindAccount from './components/findaccount';
 // import ChangePwd from './components/ChangePwd';
 // import MainPageScreen from './components/MainPage';
-import Profile from './components/Profile';
+import ProfileScreen from './components/ProfileScreen';
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
       {/* <FindAccount /> */}
       {/* <ChangePwd /> */}
       {/* <Main /> */}
-      <Profile />
+      <ProfileScreen />
     </body>
   );
 }

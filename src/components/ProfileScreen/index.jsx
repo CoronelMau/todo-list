@@ -1,17 +1,38 @@
-import Header from '../MainHeaderSection';
-import Footer from '../MainFooterSection';
-import { Main, Container, ProfileImg } from '../Style/Profile';
+import MainHeader from '../MainHeader';
+import MainFooter from '../MainFooter';
+import {
+  Main,
+  Container,
+  ProfileImg,
+  Name,
+  Button,
+  ButtonsDiv,
+  Label,
+  Functions,
+  EditImgPhoto,
+  EditImgName,
+} from '../Style/Profile';
 
 export default function ProfileScreen() {
   return (
     <div>
-      <Header />
+      <MainHeader />
       <Main>
         <Container>
           <ProfileImg src='https://github.com/CoronelMau.png' />
+          <Name>Coronel</Name>
+          <Functions>
+            <Label>FORGOT PASSWORD?</Label>
+            <ButtonsDiv>
+              <Button>Save</Button>
+              <Button>Cancel</Button>
+            </ButtonsDiv>
+          </Functions>
         </Container>
+        <EditImgPhoto src='../edit.png' />
+        <EditImgName src='../edit.png' />
       </Main>
-      <Footer />
+      <MainFooter />
     </div>
   );
 }
