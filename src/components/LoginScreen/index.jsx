@@ -1,4 +1,4 @@
-import Footer from '../footer';
+import Footer from '../MainFooter';
 import { LoginSec, Section, Form, Input, Button, Label } from '../Style/Login';
 
 export default function LoginScreen() {

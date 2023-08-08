@@ -1,5 +1,5 @@
-import Footer from '../footer';
-import Header from '../Header';
+import Footer from '../MainFooter';
+import Header from '../MainHeader';
 import {
   Main,
   Container,
