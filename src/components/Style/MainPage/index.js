@@ -45,8 +45,12 @@ export const Text = styled.p`
 
 export const CheckBox = styled.img`
   height: 20px;
+  cursor: pointer;
+
 `;
 
 export const Plus = styled.img`
   height: 50px;
+  cursor: pointer;
+
 `;
