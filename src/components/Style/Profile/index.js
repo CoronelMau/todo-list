@@ -59,9 +59,9 @@ export const EditImgPhoto = styled.img`
   height: 20px;
   padding: 5px;
   border-radius: 50%;
-  top: 60vh;
-  right: 85vh;
-  position: absolute;
+  top: 11vh;
+  right: 20vh;
+  position: relative;
   background-color: #b1cdd8;
 `
 
@@ -69,8 +69,8 @@ export const EditImgName = styled.img`
   height: 20px;
   padding: 5px;
   border-radius: 50%;
-  top: 67.5vh;
-  right: 75vh;
-  position: absolute;
+  top: 20vh;
+  right: 15vh;
+  position: relative;
   background-color: #b1cdd8;
 `

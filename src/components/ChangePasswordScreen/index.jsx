@@ -1,4 +1,4 @@
-import Footer from '../MainFooterSection';
+import Footer from '../MainFooter';
 import {
   LoginSec,
   Section,
@@ -8,7 +8,7 @@ import {
   Button,
 } from '../Style/ChangePassword';
 
-export default function ChangingPasswordScreen() {
+export default function ChangePasswordScreen() {
   return (
     <LoginSec>
       <Section>

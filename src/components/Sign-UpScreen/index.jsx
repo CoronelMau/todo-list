@@ -1,4 +1,4 @@
-import Footer from '../footer';
+import Footer from '../MainFooter';
 import { Section, SignUpSec, Form, Input, Button } from '../Style/Sign-Up';
 
 export default function SignUpScreen() {
