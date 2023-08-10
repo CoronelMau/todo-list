@@ -1,5 +1,7 @@
 import Footer from '../MainFooter';
 import Header from '../MainHeader';
+import { useState } from 'react';
+import Modal from '../Modal';
 import {
   Main,
   Container,
@@ -12,6 +14,12 @@ import {
 } from '../Style/MainPage';
 
 export default function MainPageScreen() {
+  const [modal, setModal] = useState(false);
+
+  const toggleModal = () => {
+    setModal(!modal);
+  };
+
   return (
     <div>
       <Header />
@@ -36,8 +44,9 @@ export default function MainPageScreen() {
               <Text>Task 2</Text>
             </Tasks>
           </Notes>
-          <Plus src='../plus.webp' />
+          <Plus src='../plus.webp' onClick={toggleModal} />
         </Container>
+        {modal && <Modal toggleModal={toggleModal} />}
       </Main>
       <Footer />
     </div>
