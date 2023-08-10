@@ -2,7 +2,7 @@
 // import SignUp from './components/sign-up';
 // import FindAccount from './components/findaccount';
 // import ChangePwd from './components/ChangePwd';
-import Main from './components/MainPage';
+// import MainPageScreen from './components/MainPage';
 import Profile from './components/Profile';
 
 function App() {
