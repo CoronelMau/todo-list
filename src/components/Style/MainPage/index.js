@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const Main = styled.div`
   height: 82vh;
   background-color: #b1cdd8;
-  font-family: 'Montserrat', sans-serif;
 `;
 
 export const Container = styled.div`

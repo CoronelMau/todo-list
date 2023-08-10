@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const Footer = styled.footer`
   display: flex;
   flex-direction: column;
-  font-family: 'Montserrat', sans-serif;
   align-items: center;
   justify-content: center;
   background-color: #ffffff;

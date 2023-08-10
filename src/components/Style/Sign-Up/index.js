@@ -5,7 +5,6 @@ export const SignUpSec = styled.div`
   flex-direction: column;
   justify-content: space-evenly;
   background-color: #0d4d5d;
-  font-family: 'Montserrat', sans-serif;
 `;
 
 export const Section = styled.div`
@@ -29,7 +28,6 @@ export const Form = styled.form`
 `;
 
 export const Input = styled.input`
-  font-family: 'Montserrat', sans-serif;
   box-sizing: border-box;
   border: none;
   border-radius: 10px;
@@ -41,7 +39,6 @@ export const Input = styled.input`
 `;
 
 export const Button = styled.button`
-  font-family: 'Montserrat', sans-serif;
   background-color: #0d4d5d;
   border: none;
   color: #ffffff;
