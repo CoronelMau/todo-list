@@ -29,8 +29,8 @@ export default function ProfileScreen() {
             </ButtonsDiv>
           </Functions>
         </Container>
-        <EditImgPhoto src='../edit.png' />
-        <EditImgName src='../edit.png' />
+        <EditImgPhoto src='../edit.webp' />
+        <EditImgName src='../edit.webp' />
       </Main>
       <MainFooter />
     </div>

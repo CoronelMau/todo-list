@@ -20,7 +20,7 @@ export default function MainPageScreen() {
           <Notes>
             <NotesTitle>TITLE </NotesTitle>
             <Tasks>
-              <CheckBox src='./check.png' />
+              <CheckBox src='../check.webp' />
               <Text>Task 1</Text>
             </Tasks>
           </Notes>
@@ -28,15 +28,15 @@ export default function MainPageScreen() {
           <Notes>
             <NotesTitle>TITLE</NotesTitle>
             <Tasks>
-              <CheckBox src='./check.png' />
+              <CheckBox src='../check.webp' />
               <Text>Task 1</Text>
             </Tasks>
             <Tasks>
-              <CheckBox src='./check.png' />
+              <CheckBox src='../check.webp' />
               <Text>Task 2</Text>
             </Tasks>
           </Notes>
-          <Plus src='./plus.png' />
+          <Plus src='../plus.webp' />
         </Container>
       </Main>
       <Footer />
