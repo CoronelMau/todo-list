@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import Footer from '../footer';
+import Footer from '../MainFooterSection';
 
-const SignUpSec = styled.div`
+const LoginSec = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -46,28 +46,33 @@ const Button = styled.button`
   background-color: #0d4d5d;
   border: none;
   color: #ffffff;
-  font-size: 30px;
+  font-size: 26px;
   padding: 10px 60px 10px 60px;
   border-radius: 10px;
   width: 270px;
-  margin-top: 70px;
+  margin-top: 50px;
+  margin-bottom: 100px;
 `;
 
-const SignUp = () => {
+const Header = styled.h1`
+  font-weight: bold;
+  font-size: 24px;
+  color: #0d4d5d;
+  padding: 30px 200px 50px 200px;
+`;
+
+export default function ChangingPasswordScreen() {
   return (
-    <SignUpSec>
+    <LoginSec>
       <Section>
         <Form>
-          <Input placeholder='name'></Input>
-          <Input placeholder='email@example.com'></Input>
-          <Input type='password' placeholder='password'></Input>
-          <Input type='password' placeholder='repeat password'></Input>
-          <Button>SIGN-UP</Button>
+          <Header>Change Password</Header>
+          <Input placeholder='new password'></Input>
+          <Input placeholder='repeat password'></Input>
+          <Button>SAVE</Button>
         </Form>
       </Section>
       <Footer />
-    </SignUpSec>
+    </LoginSec>
   );
-};
-
-export default SignUp;
+}
