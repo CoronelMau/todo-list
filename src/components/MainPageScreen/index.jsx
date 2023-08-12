@@ -2,16 +2,8 @@ import Footer from '../MainFooter';
 import Header from '../MainHeader';
 import { useState } from 'react';
 import Modal from '../Modal';
-import {
-  Main,
-  Container,
-  Notes,
-  NotesTitle,
-  CheckBox,
-  Text,
-  Tasks,
-  Plus,
-} from '../Style/MainPage';
+import Note from '../Note';
+import { Main, Container, Plus } from '../Style/MainPage';
 
 export default function MainPageScreen() {
   const [modal, setModal] = useState(false);
@@ -20,33 +12,31 @@ export default function MainPageScreen() {
     setModal(!modal);
   };
 
+  const [notes, updateNotes] = useState([
+    {
+      title: 'Try',
+      task: 'task1 asd f as dfas d fasdf asdfa sdfasd fasdf',
+    },
+  ]);
+
+  const registerNote = (newNote) => {
+    console.log('Note:' + newNote.title + ' ' + newNote.task);
+    updateNotes([...notes, newNote]);
+  };
+
   return (
     <div>
       <Header />
       <Main>
+        {modal && (
+          <Modal toggleModal={toggleModal} registerNote={registerNote} />
+        )}
         <Container>
-          <Notes>
-            <NotesTitle>TITLE </NotesTitle>
-            <Tasks>
-              <CheckBox src='../check.webp' />
-              <Text>Task 1</Text>
-            </Tasks>
-          </Notes>
-
-          <Notes>
-            <NotesTitle>TITLE</NotesTitle>
-            <Tasks>
-              <CheckBox src='../check.webp' />
-              <Text>Task 1</Text>
-            </Tasks>
-            <Tasks>
-              <CheckBox src='../check.webp' />
-              <Text>Task 2</Text>
-            </Tasks>
-          </Notes>
+          {notes.map((note) => (
+            <Note key={note.title} data={note} />
+          ))}
           <Plus src='../plus.webp' onClick={toggleModal} />
         </Container>
-        {modal && <Modal toggleModal={toggleModal} />}
       </Main>
       <Footer />
     </div>

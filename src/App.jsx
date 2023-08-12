@@ -8,18 +8,16 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <body>
-      <Router>
-        <Routes>
-          <Route path='/' element={<LoginScreen />} />
-          <Route path='/sign-up' element={<SignUpScreen />} />
-          <Route path='/find-account' element={<FindAccountScreen />} />
-          <Route path='/change-pwd/:id' element={<ChangePasswordScreen />} />
-          <Route path='/main/:id' element={<MainPageScreen />} />
-          <Route path='/profile/:id' element={<ProfileScreen />} />
-        </Routes>
-      </Router>
-    </body>
+    <Router>
+      <Routes>
+        <Route path='/' element={<LoginScreen />} />
+        <Route path='/sign-up' element={<SignUpScreen />} />
+        <Route path='/find-account' element={<FindAccountScreen />} />
+        <Route path='/change-pwd/:id' element={<ChangePasswordScreen />} />
+        <Route path='/main/:id' element={<MainPageScreen />} />
+        <Route path='/profile/:id' element={<ProfileScreen />} />
+      </Routes>
+    </Router>
   );
 }
 
