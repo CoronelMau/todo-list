@@ -1,16 +1,13 @@
 import Footer from '../MainFooter';
 import Header from '../MainHeader';
 import { useState } from 'react';
-import Modal from '../Modal';
+import ModalTodo from '../ModalTodo';
 import Note from '../Note';
 import { Main, Container, Plus } from '../Style/MainPage';
+import { useModal } from '../../hooks';
 
 export default function MainPageScreen() {
-  const [modal, setModal] = useState(false);
-
-  const toggleModal = () => {
-    setModal(!modal);
-  };
+  const { close, isOpen, open } = useModal();
 
   const [notes, updateNotes] = useState([
     {
@@ -19,8 +16,9 @@ export default function MainPageScreen() {
     },
   ]);
 
+  const onClose = () => close();
+
   const registerNote = (newNote) => {
-    console.log('Note:' + newNote.title + ' ' + newNote.task);
     updateNotes([...notes, newNote]);
   };
 
@@ -28,14 +26,17 @@ export default function MainPageScreen() {
     <div>
       <Header />
       <Main>
-        {modal && (
-          <Modal toggleModal={toggleModal} registerNote={registerNote} />
-        )}
+        <ModalTodo
+          isOpen={isOpen}
+          onClose={onClose}
+          registerNote={registerNote}
+        />
+
         <Container>
           {notes.map((note) => (
             <Note key={note.title} data={note} />
           ))}
-          <Plus src='../plus.webp' onClick={toggleModal} />
+          <Plus src='../plus.webp' onClick={open} />
         </Container>
       </Main>
       <Footer />
