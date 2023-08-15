@@ -50,23 +50,6 @@ export const ModalButton = styled.button`
   }
 `;
 
-export const Label = styled.h1`
-  font-size: 20px;
-  color: #0d4d5d;
-  padding-left: 10px;
-  padding-bottom: 5px;
-`;
-
-export const Input = styled.input`
-  border: none;
-  border-radius: 50px;
-  width: 95%;
-  height: 20px;
-  margin-bottom: 20px;
-  font-size: 20px;
-  padding: 10px 0 10px 15px;
-`;
-
 export const ButtonContainer = styled.div`
   padding-right: 20px;
   display: flex;
@@ -80,4 +63,45 @@ export const Button = styled.button`
   background-color: #0d4d5d;
   font-size: 18px;
   border-radius: 10px;
+  cursor: pointer;
+`;
+
+export const Label = styled.h1`
+  font-size: 20px;
+  color: #0d4d5d;
+  padding-left: 10px;
+  padding-bottom: 5px;
+`;
+
+export const InputBlock = styled.div`
+  display: flex;
+  align-items: center;
+  width: 95%;
+  justify-content: space-between;
+`;
+
+export const InputTask = styled.input`
+  border: none;
+  border-radius: 50px;
+  width: 85%;
+  height: 20px;
+  font-size: 20px;
+  padding: 10px 0 10px 15px;
+  margin-bottom: 20px;
+`;
+
+export const InputTitle = styled.input`
+  border: none;
+  border-radius: 50px;
+  width: 95%;
+  height: 20px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  padding: 10px 0 10px 15px;
+`;
+
+export const ImgButton = styled.img`
+  margin-bottom: 20px;
+  width: 30px;
+  cursor: pointer;
 `;
