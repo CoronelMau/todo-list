@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import Field from '../Field';
 import { useModal } from '../../hooks';
 import {
   Overlay,
@@ -8,15 +7,55 @@ import {
   ModalButton,
   Button,
   ButtonContainer,
+  ImgButton,
+  InputBlock,
+  Label,
+  InputTask,
+  InputTitle,
 } from '../Style/Modal';
 
 export default function ModalTodo({ isOpen, onClose, registerNote }) {
+  const [id, setId] = useState(1);
   const { close, isOpen: status, open } = useModal();
   const [title, updateTitle] = useState('');
-  const [task, updateTask] = useState('');
+  const [tasks, setTasks] = useState([]);
+
+  const handleChangeTitle = (e) => {
+    updateTitle(e.target.value);
+  };
+
+  const onChangeTask = (description, index) => {
+    const newTasks = [...tasks];
+
+    newTasks[index].description = description;
+    setTasks(newTasks);
+  };
+
+  const onClickAddTask = () => {
+    if (tasks.length > 0 && !tasks[tasks.length - 1].description) return;
+
+    const newId = `todo-task-${id}`;
+
+    setTasks([
+      ...tasks,
+      {
+        id: newId,
+        description: '',
+      },
+    ]);
+
+    setId(id + 1);
+  };
+
+  const deleteTask = (index) => {
+    const newTasks = tasks
+      .slice(0, index)
+      .concat(tasks.slice(index + 1, tasks.legth));
+
+    setTasks(newTasks);
+  };
 
   useEffect(() => {
-    console.log({ isOpen });
     if (isOpen) return open();
 
     close();
@@ -25,6 +64,8 @@ export default function ModalTodo({ isOpen, onClose, registerNote }) {
   const closeModal = () => {
     close();
     onClose();
+    updateTitle('');
+    setTasks([]);
   };
 
   const handleSubmit = (event) => {
@@ -34,10 +75,11 @@ export default function ModalTodo({ isOpen, onClose, registerNote }) {
 
     const sendData = {
       title,
-      task,
+      tasks,
     };
 
     registerNote(sendData);
+    updateTitle('');
   };
 
   if (!status) return null;
@@ -51,9 +93,30 @@ export default function ModalTodo({ isOpen, onClose, registerNote }) {
         </ModalHeader>
 
         <form onSubmit={handleSubmit}>
-          <Field title='Title' updateValue={updateTitle} info={title} />
-          <Field title='Task' updateValue={updateTask} info={task} />
+          <Label> Title</Label>
+          <InputTitle
+            required={true}
+            value={title}
+            onChange={handleChangeTitle}
+          />
 
+          {tasks.map((task, index) => (
+            <div key={task.id}>
+              <Label> Task: {index + 1} </Label>
+              <InputBlock>
+                <InputTask
+                  required={true}
+                  value={task.description}
+                  onChange={(e) => onChangeTask(e.target.value, index)}
+                />
+                <ImgButton
+                  src='../minus.webp'
+                  onClick={() => deleteTask(index)}
+                />
+              </InputBlock>
+            </div>
+          ))}
+          <ImgButton src='../plus.webp' onClick={onClickAddTask} />
           <ButtonContainer>
             <Button>Accept</Button>
           </ButtonContainer>

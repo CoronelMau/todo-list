@@ -1,15 +1,20 @@
-import { Notes, NotesTitle, Tasks, Text } from '../Style/Notes';
+// import { useState } from 'react';
+import { TodoNote, NotesTitle, Tasks, Task, Text } from '../Style/Notes';
 
 export default function Note(props) {
-  const { title, task } = props.data;
+  const { title, tasks } = props.data;
 
   return (
-    <Notes>
+    <TodoNote>
       <NotesTitle> {title}</NotesTitle>
       <Tasks>
-        <input type='checkbox' />
-        <Text>{task}</Text>
+        {tasks.map((task) => (
+          <Task key={task.id}>
+            <input type='checkbox' />
+            <Text key={task.id}>{task.description}</Text>
+          </Task>
+        ))}
       </Tasks>
-    </Notes>
+    </TodoNote>
   );
 }

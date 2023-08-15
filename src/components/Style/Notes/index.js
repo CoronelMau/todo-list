@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Notes = styled.div`
+export const TodoNote = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,8 +8,8 @@ export const Notes = styled.div`
   color: #ffffff;
   background-color: #0d4d5d;
   border-radius: 10px;
-  min-height: 250px;
-  width: 250px;
+  height: 300px;
+  width: 350px;
 `;
 
 export const NotesTitle = styled.h1`
@@ -23,12 +23,9 @@ export const NotesTitle = styled.h1`
 `;
 
 export const Tasks = styled.div`
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  width: 80%;
-  margin-top: 5px;
-  padding: 5px;
+  margin: 1rem ;
+  width: 90%;
+  overflow-y: auto;
 `;
 
 export const Text = styled.p`
@@ -38,7 +35,10 @@ export const Text = styled.p`
   flex: 1;
 `;
 
-export const CheckBox = styled.img`
-  height: 20px;
-  cursor: pointer;
+export const Task = styled.div`
+  margin: 0.5rem 1rem;
+
+  input, ${Text}  {
+    display: inline;
+  }
 `;

@@ -12,7 +12,11 @@ export default function MainPageScreen() {
   const [notes, updateNotes] = useState([
     {
       title: 'Try',
-      task: 'task1 asd f as dfas d fasdf asdfa sdfasd fasdf',
+      tasks: [
+        {
+          description: 'task1 asd f as dfas d fasdf asdfa sdfasd fasdf',
+        },
+      ],
     },
   ]);
 
