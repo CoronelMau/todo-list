@@ -38,6 +38,13 @@ export const Input = styled.input`
   width: 570px;
 `;
 
+export const Image = styled.img`
+  height: 20px;
+  position: relative;
+  right: 280px;
+  bottom: 60px
+`
+
 export const Button = styled.button`
   background-color: #0d4d5d;
   border: none;

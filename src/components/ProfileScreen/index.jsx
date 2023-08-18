@@ -12,6 +12,7 @@ import {
   EditImgPhoto,
   EditImgName,
 } from '../Style/Profile';
+import { Link } from 'react-router-dom';
 
 export default function ProfileScreen() {
   return (
@@ -22,7 +23,9 @@ export default function ProfileScreen() {
           <ProfileImg src='https://github.com/CoronelMau.png' />
           <Name>Coronel</Name>
           <Functions>
-            <Label>FORGOT PASSWORD?</Label>
+            <Link to='/change-pwd/:id'>
+              <Label>FORGOT PASSWORD?</Label>
+            </Link>
             <ButtonsDiv>
               <Button>Save</Button>
               <Button>Cancel</Button>
