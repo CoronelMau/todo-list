@@ -10,6 +10,7 @@ export const Overlay = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1;
 `;
 
 export const ModalContainer = styled.div`
@@ -20,6 +21,17 @@ export const ModalContainer = styled.div`
   border-radius: 5px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   padding: 20px;
+`;
+
+export const TaskContainer = styled.div`
+  max-height: 260px;
+  overflow-y: auto;
+`;
+
+export const ButtonsDiv = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 `;
 
 export const ModalHeader = styled.div`
@@ -50,13 +62,8 @@ export const ModalButton = styled.button`
   }
 `;
 
-export const ButtonContainer = styled.div`
-  padding-right: 20px;
-  display: flex;
-  justify-content: end;
-`;
-
 export const Button = styled.button`
+  position: relative;
   border: none;
   padding: 10px;
   color: #fff;
@@ -75,9 +82,10 @@ export const Label = styled.h1`
 
 export const InputBlock = styled.div`
   display: flex;
-  align-items: center;
   width: 95%;
   justify-content: space-between;
+  max-height: 450px;
+  overflow-y: auto;
 `;
 
 export const InputTask = styled.input`
@@ -88,6 +96,7 @@ export const InputTask = styled.input`
   font-size: 20px;
   padding: 10px 0 10px 15px;
   margin-bottom: 20px;
+  overflow-y: auto;
 `;
 
 export const InputTitle = styled.input`
@@ -101,7 +110,7 @@ export const InputTitle = styled.input`
 `;
 
 export const ImgButton = styled.img`
-  margin-bottom: 20px;
   width: 30px;
+  height: 30px;
   cursor: pointer;
 `;
