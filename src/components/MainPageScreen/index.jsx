@@ -9,16 +9,7 @@ import { useModal } from '../../hooks';
 export default function MainPageScreen() {
   const { close, isOpen, open } = useModal();
 
-  const [notes, updateNotes] = useState([
-    {
-      title: 'Try',
-      tasks: [
-        {
-          description: 'task1 asd f as dfas d fasdf asdfa sdfasd fasdf',
-        },
-      ],
-    },
-  ]);
+  const [notes, updateNotes] = useState([]);
 
   const onClose = () => close();
 
