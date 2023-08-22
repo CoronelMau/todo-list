@@ -18,6 +18,9 @@ export const Container = styled.div`
   border-radius: 20px;
   background-color: #0d4d5d;
   gap: 25px;
+  a{
+    text-decoration: none;
+  }
 `;
 
 export const ProfileImg = styled.img`

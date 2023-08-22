@@ -1,11 +1,16 @@
 import { Header, MainTitle, Input, ProfileImg } from '../Style/MainHeader';
+import { Link } from 'react-router-dom';
 
 export default function MainHeader() {
   return (
     <Header>
-      <MainTitle>Todo - List</MainTitle>
+      <Link to='/main/:id'>
+        <MainTitle>Todo - List</MainTitle>
+      </Link>
       <Input placeholder='search' />
-      <ProfileImg src='https://github.com/CoronelMau.png' />
+      <Link to='/profile/:id'>
+        <ProfileImg src='https://github.com/CoronelMau.png' />
+      </Link>
     </Header>
   );
 }

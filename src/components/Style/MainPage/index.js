@@ -15,7 +15,9 @@ export const Container = styled.div`
 `;
 
 export const Plus = styled.img`
+  position: absolute;
+  right: 40px;
+  bottom: 100px;
   height: 50px;
   cursor: pointer;
-
 `;
