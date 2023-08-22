@@ -6,12 +6,13 @@ import {
   ModalHeader,
   ModalButton,
   Button,
-  ButtonContainer,
   ImgButton,
   InputBlock,
   Label,
   InputTask,
   InputTitle,
+  TaskContainer,
+  ButtonsDiv,
 } from '../Style/Modal';
 
 export default function ModalTodo({ isOpen, onClose, registerNote }) {
@@ -98,28 +99,31 @@ export default function ModalTodo({ isOpen, onClose, registerNote }) {
             required={true}
             value={title}
             onChange={handleChangeTitle}
+            autoFocus
           />
-
-          {tasks.map((task, index) => (
-            <div key={task.id}>
-              <Label> Task: {index + 1} </Label>
-              <InputBlock>
-                <InputTask
-                  required={true}
-                  value={task.description}
-                  onChange={(e) => onChangeTask(e.target.value, index)}
-                />
-                <ImgButton
-                  src='../minus.webp'
-                  onClick={() => deleteTask(index)}
-                />
-              </InputBlock>
-            </div>
-          ))}
-          <ImgButton src='../plus.webp' onClick={onClickAddTask} />
-          <ButtonContainer>
+          <TaskContainer>
+            {tasks.map((task, index) => (
+              <div key={task.id}>
+                <Label> Task: {index + 1} </Label>
+                <InputBlock>
+                  <InputTask
+                    required={true}
+                    value={task.description}
+                    onChange={(e) => onChangeTask(e.target.value, index)}
+                    autoFocus
+                  />
+                  <ImgButton
+                    src='../minus.webp'
+                    onClick={() => deleteTask(index)}
+                  />
+                </InputBlock>
+              </div>
+            ))}
+          </TaskContainer>
+          <ButtonsDiv>
+            <ImgButton src='../plus.webp' onClick={onClickAddTask} />
             <Button>Accept</Button>
-          </ButtonContainer>
+          </ButtonsDiv>
         </form>
       </ModalContainer>
     </Overlay>

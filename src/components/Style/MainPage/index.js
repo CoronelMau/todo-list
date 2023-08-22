@@ -5,6 +5,14 @@ export const Main = styled.div`
   background-color: #b1cdd8;
 `;
 
+export const Close = styled.img`
+  position: relative;
+  height: 30px;
+  top: 20px;
+  left: 330px;
+  cursor: pointer;
+`
+
 export const Container = styled.div`
   padding: 10vh 25vh 10vh 25vh;
   display: flex;
@@ -16,8 +24,8 @@ export const Container = styled.div`
 
 export const Plus = styled.img`
   position: absolute;
-  right: 40px;
-  bottom: 100px;
+  right: 5vh;
+  bottom: 5vh;
   height: 50px;
   cursor: pointer;
 `;

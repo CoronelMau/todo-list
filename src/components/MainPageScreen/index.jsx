@@ -3,7 +3,7 @@ import Header from '../MainHeader';
 import { useState } from 'react';
 import ModalTodo from '../ModalTodo';
 import Note from '../Note';
-import { Main, Container, Plus } from '../Style/MainPage';
+import { Main, Container, Plus, Close } from '../Style/MainPage';
 import { useModal } from '../../hooks';
 
 export default function MainPageScreen() {
@@ -26,6 +26,14 @@ export default function MainPageScreen() {
     updateNotes([...notes, newNote]);
   };
 
+  const deleteNote = (index) => {
+    const newNotes = notes
+      .slice(0, index)
+      .concat(notes.slice(index + 1, notes.legth));
+
+    updateNotes(newNotes);
+  };
+
   return (
     <div>
       <Header />
@@ -37,11 +45,14 @@ export default function MainPageScreen() {
         />
 
         <Container>
-          {notes.map((note) => (
-            <Note key={note.title} data={note} />
+          {notes.map((note, index) => (
+            <div key={note.title}>
+              <Close src='../close.webp' onClick={() => deleteNote(index)} />
+              <Note data={note} />
+            </div>
           ))}
-          <Plus src='../plus.webp' onClick={open} />
         </Container>
+        <Plus src='../plus.webp' onClick={open} />
       </Main>
       <Footer />
     </div>
