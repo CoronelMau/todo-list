@@ -10,7 +10,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path='/' element={<LoginScreen />} />
+        <Route path='/login' element={<LoginScreen />} />
         <Route path='/sign-up' element={<SignUpScreen />} />
         <Route path='/find-account' element={<FindAccountScreen />} />
         <Route path='/change-pwd/:id' element={<ChangePasswordScreen />} />
