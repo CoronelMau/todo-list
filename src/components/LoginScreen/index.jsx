@@ -50,7 +50,28 @@ export default function LoginScreen() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate('/main/:id');
+
+    const data = {
+      email: email.value,
+      password: password.value,
+    };
+
+    const config = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    };
+
+    fetch('http://localhost:5137/user/login', config)
+      .then((res) => res.json())
+      .then((res) => {
+        localStorage.setItem('token', JSON.stringify(res.jwt));
+
+        navigate('/main');
+      })
+      .catch((error) => console.error(error));
   };
 
   return (

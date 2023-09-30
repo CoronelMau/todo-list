@@ -39,23 +39,9 @@ export const Functions = styled.div`
   gap: 15vh;
 `
 
-export const ButtonsDiv = styled.div`
-  display: flex;
-  gap: 10px;
-`
-
 export const Label = styled.p`
   font-size: 14px;
   color: #b1cdd8;
-`
-
-export const Button = styled.button`
-  color: #0d4d5d;
-  font-size: 15px;
-  background-color: #b1cdd8;
-  border:none;
-  border-radius: 5px;
-  padding: 5px 15px;
 `
 
 export const EditImgPhoto = styled.img`
@@ -66,6 +52,7 @@ export const EditImgPhoto = styled.img`
   right: 20vh;
   position: relative;
   background-color: #b1cdd8;
+  cursor: pointer;
 `
 
 export const EditImgName = styled.img`
@@ -76,4 +63,5 @@ export const EditImgName = styled.img`
   right: 15vh;
   position: relative;
   background-color: #b1cdd8;
+  cursor: pointer;
 `

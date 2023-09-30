@@ -10,7 +10,7 @@ export default function Note(props) {
       <Tasks>
         {tasks.map((task) => (
           <Task key={task.id}>
-            <input type='checkbox' onChange={() => console.log('Hello')} />
+            <input type='checkbox' />
             <Text>{task.description}</Text>
           </Task>
         ))}
