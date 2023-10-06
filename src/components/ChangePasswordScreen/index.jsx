@@ -55,7 +55,7 @@ export default function ChangePasswordScreen() {
     };
 
     const config = {
-      method: 'PATCH',
+      method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
         Authorization: `Bearer ${jwt}`,

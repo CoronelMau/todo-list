@@ -39,7 +39,7 @@ export default function ModalName({ isOpen, onClose, registerNote }) {
     };
 
     const config = {
-      method: 'PATCH',
+      method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
         Authorization: `Bearer ${jwt}`,

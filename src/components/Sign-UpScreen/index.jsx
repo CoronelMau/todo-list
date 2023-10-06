@@ -80,7 +80,10 @@ export default function SignUpScreen() {
     const data = {
       name: name.value,
       email: email.value,
-      password: password.value,
+      password:
+        password === repeatPassword
+          ? password.value
+          : alert('Passwords are different'),
     };
 
     const config = {

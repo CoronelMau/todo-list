@@ -43,6 +43,7 @@ export default function ModalTodo({ isOpen, onClose, registerNote, idAuthor }) {
       {
         id: newId,
         description: '',
+        check: false,
       },
     ]);
 

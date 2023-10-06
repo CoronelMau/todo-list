@@ -57,7 +57,7 @@ export default function ProfileScreen() {
           <Name>{name}</Name>
           <Functions>
             <Link to='/change-pwd'>
-              <Label>FORGOT PASSWORD?</Label>
+              <Label>CHANGE PASSWORD</Label>
             </Link>
           </Functions>
         </Container>
