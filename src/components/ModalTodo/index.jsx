@@ -15,11 +15,12 @@ import {
   ButtonsDiv,
 } from '../Style/Modal';
 
-export default function ModalTodo({ isOpen, onClose, registerNote }) {
+export default function ModalTodo({ isOpen, onClose, registerNote, idAuthor }) {
   const [id, setId] = useState(1);
   const { close, isOpen: status, open } = useModal();
   const [title, updateTitle] = useState('');
   const [tasks, setTasks] = useState([]);
+  const author = idAuthor;
 
   const handleChangeTitle = (e) => {
     updateTitle(e.target.value);
@@ -42,6 +43,7 @@ export default function ModalTodo({ isOpen, onClose, registerNote }) {
       {
         id: newId,
         description: '',
+        check: false,
       },
     ]);
 
@@ -72,15 +74,32 @@ export default function ModalTodo({ isOpen, onClose, registerNote }) {
   const handleSubmit = (event) => {
     event.preventDefault();
 
+    const jwt = JSON.parse(localStorage.getItem('token'));
+
     closeModal();
 
     const sendData = {
       title,
       tasks,
+      author,
     };
 
-    registerNote(sendData);
-    updateTitle('');
+    const config = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${jwt}`,
+      },
+      body: JSON.stringify(sendData),
+    };
+
+    fetch('http://localhost:5137/user/note-register', config)
+      .then((res) => res.json())
+      .then((res) => {
+        registerNote(sendData);
+        updateTitle('');
+      })
+      .catch((error) => console.error(error));
   };
 
   if (!status) return null;

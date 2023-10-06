@@ -47,7 +47,7 @@ export const Button = styled.button`
   border-radius: 10px;
   width: 270px;
   margin-top: 50px;
-  margin-bottom: 100px;
+  margin-bottom: 80px;
 `;
 
 export const Header = styled.h1`

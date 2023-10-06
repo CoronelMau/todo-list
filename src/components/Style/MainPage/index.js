@@ -23,7 +23,7 @@ export const Container = styled.div`
 `;
 
 export const Plus = styled.img`
-  position: absolute;
+  position: fixed;
   right: 5vh;
   bottom: 5vh;
   height: 50px;

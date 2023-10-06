@@ -4,7 +4,24 @@ import FindAccountScreen from './components/FindAccountScreen';
 import ChangePasswordScreen from './components/ChangePasswordScreen';
 import MainPageScreen from './components/MainPageScreen';
 import ProfileScreen from './components/ProfileScreen';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import {
+  Navigate,
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from 'react-router-dom';
+
+function isAuthenticated() {
+  const jwt = localStorage.getItem('token');
+
+  return !!jwt;
+}
+
+function ProtectedRoute({ children }) {
+  if (isAuthenticated()) return children;
+
+  return <Navigate to='/' replace />;
+}
 
 function App() {
   return (
@@ -13,9 +30,16 @@ function App() {
         <Route path='/' element={<LoginScreen />} />
         <Route path='/sign-up' element={<SignUpScreen />} />
         <Route path='/find-account' element={<FindAccountScreen />} />
-        <Route path='/change-pwd/:id' element={<ChangePasswordScreen />} />
-        <Route path='/main/:id' element={<MainPageScreen />} />
-        <Route path='/profile/:id' element={<ProfileScreen />} />
+        <Route path='/change-pwd' element={<ChangePasswordScreen />} />
+        <Route
+          path='/main'
+          element={
+            <ProtectedRoute>
+              <MainPageScreen />
+            </ProtectedRoute>
+          }
+        />
+        <Route path='/profile' element={<ProfileScreen />} />
       </Routes>
     </Router>
   );

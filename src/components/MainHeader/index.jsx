@@ -8,12 +8,12 @@ export default function MainHeader() {
 
   return (
     <Header>
-      <Link to='/main/:id'>
+      <Link to='/main'>
         <MainTitle>Todo - List</MainTitle>
       </Link>
       <Input placeholder='search' />
       <ProfileImg
-        src='https://github.com/CoronelMau.png'
+        src='../user.webp'
         onClick={() => {
           handleMenu(!menu);
         }}
