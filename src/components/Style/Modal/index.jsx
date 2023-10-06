@@ -21,6 +21,10 @@ export const ModalContainer = styled.div`
   border-radius: 5px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   padding: 20px;
+
+  @media screen and (max-width: 425px) {
+    width: 350px;
+  }
 `;
 
 export const TaskContainer = styled.div`

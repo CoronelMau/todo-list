@@ -15,6 +15,15 @@ export const MainTitle = styled.h1`
   color: #ffffff;
   font-size: 40px;
   padding-left: 50px;
+
+  @media screen and (max-width: 425px){
+    font-size: 30px;
+  }
+
+
+  @media screen and (max-width: 320px){
+    font-size: 25px;
+  }
 `;
 
 export const Input = styled.input`
@@ -22,6 +31,17 @@ export const Input = styled.input`
   border: none;
   padding: 5px 300px 5px 20px;
   border-radius: 20px;
+
+  @media screen and (max-width: 768px){
+    padding: 5px 100px 5px 20px;
+  }
+  
+  @media screen and (max-width: 768px){
+    padding: 5px 100px 5px 20px;
+  }
+
+  @media screen and (max-width: 426px){
+display: none  }
 `;
 
 export const ProfileImg = styled.img`
@@ -29,4 +49,8 @@ export const ProfileImg = styled.img`
   height: 50px;
   margin-right: 80px;
   cursor: pointer;
+
+  @media screen and (max-width: 320px){
+    margin-right: 20px;
+  }
 `;

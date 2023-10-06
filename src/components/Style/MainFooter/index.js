@@ -6,7 +6,8 @@ export const Footer = styled.footer`
   align-items: center;
   justify-content: center;
   background-color: #ffffff;
-  min-height: 10vh;
+  max-height: 10vh;
+  padding-top: 10px;
 `;
 
 export const Logo = styled.img`

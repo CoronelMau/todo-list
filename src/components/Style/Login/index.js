@@ -4,7 +4,7 @@ export const LoginSec = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  background-color: #0d4d5d;
+  background-color: #0d4d5d; 
 `;
 
 export const Section = styled.div`
@@ -25,7 +25,8 @@ padding-bottom: 50px;
   a{
     text-decoration: none;
   }
-`
+
+  `
 
 export const Form = styled.form`
   display: flex;
@@ -34,7 +35,19 @@ export const Form = styled.form`
   justify-content: center;
   align-items: center;
   padding-top: 100px;
-`;
+  
+  @media screen and (max-width: 768px){
+    width: 580px;
+  }
+
+  @media screen and (max-width: 426px){
+    width: 320px;
+  }
+
+  @media screen and (max-width: 320px){
+    width: 270px;
+  }
+  `;
 
 export const Input = styled.input`
   box-sizing: border-box;
@@ -44,6 +57,16 @@ export const Input = styled.input`
   font-size: 20px;
   margin: 5px;
   width: 570px; 
+
+  @media screen and (max-width: 768px){
+    width: 480px;
+  }
+
+  @media screen and (max-width: 426px){
+    width: 240px;
+    padding: 20px 20px 20px 20px;
+    font-size: 16px;
+  }
 `;
 
 export const Button = styled.button`
@@ -56,6 +79,11 @@ export const Button = styled.button`
   width: 270px;
   margin-top: 20px;
   cursor: pointer;
+  @media screen and (max-width: 426px){
+    width: 150px;
+    padding: 10px 30px 10px 30px;
+    font-size: 16px;
+}
 `;
 
 export const Label = styled.h1`
@@ -65,4 +93,17 @@ export const Label = styled.h1`
   padding: 30px 200px 30px 200px;
   border-bottom: solid 1px #0d4d5d;
   cursor: pointer;
+
+  @media screen and (max-width: 768px){
+    padding: 30px 100px 30px 100px;
+  }
+
+  @media screen and (max-width: 426px){
+    padding: 30px 50px 30px 50px;
+  }
+
+  @media screen and (max-width: 320px){
+    padding: 30px;
+  }
+
 `;

@@ -14,6 +14,10 @@ export const Overlay = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+
+  @media screen and (max-width: 320px){
+    right: 2rem;
+  }
   `
 
 export const Option = styled.h1`

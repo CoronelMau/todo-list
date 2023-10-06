@@ -11,6 +11,10 @@ export const Close = styled.img`
   top: 20px;
   left: 330px;
   cursor: pointer;
+
+  @media screen and (max-width: 375px){
+    left: 250px;
+  }
 `
 
 export const Container = styled.div`
@@ -20,6 +24,18 @@ export const Container = styled.div`
   align-items: center;
   gap: 50px;
   flex-wrap: wrap;
+
+  @media screen and (max-width: 1024px){
+    padding: 10vh;
+  }
+
+  @media screen and (max-width: 425px){
+    padding: 8vh 20vh 8vh 20vh;
+  }
+
+  @media screen and (max-width: 375px){
+    padding: 8vh 10vh 8vh 10vh;
+  }
 `;
 
 export const Plus = styled.img`
@@ -28,4 +44,9 @@ export const Plus = styled.img`
   bottom: 5vh;
   height: 50px;
   cursor: pointer;
+
+  @media screen and (max-width: 425px){
+    height: 45px;
+    right: 2vh;
+  }
 `;
