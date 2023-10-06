@@ -7,7 +7,7 @@ import {
   Name,
   Label,
   Functions,
-  EditImgPhoto,
+  // EditImgPhoto,
   EditImgName,
 } from '../Style/Profile';
 import ModalName from '../ModalName';
@@ -54,15 +54,17 @@ export default function ProfileScreen() {
         <ModalName isOpen={isOpen} onClose={onClose} />
         <Container>
           <ProfileImg src='../user.webp' />
-          <Name>{name}</Name>
+          <Name>
+            <div style={{ flex: 1 }}>{name}</div>
+            <EditImgName src='../edit.webp' onClick={open} />
+          </Name>
           <Functions>
             <Link to='/change-pwd'>
               <Label>CHANGE PASSWORD</Label>
             </Link>
           </Functions>
+          {/* <EditImgPhoto src='../edit.webp' /> */}
         </Container>
-        <EditImgPhoto src='../edit.webp' />
-        <EditImgName src='../edit.webp' onClick={open} />
       </Main>
       <MainFooter />
     </div>

@@ -10,6 +10,10 @@ export const TodoNote = styled.div`
   border-radius: 10px;
   height: 300px;
   width: 350px;
+
+  @media screen and (max-width: 375px){
+    width: 280px;
+  }
 `;
 
 export const NotesTitle = styled.h1`

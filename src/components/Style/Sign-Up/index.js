@@ -42,7 +42,21 @@ export const Image = styled.img`
   height: 20px;
   position: relative;
   right: 280px;
-  bottom: 60px
+  bottom: 60px;
+  @media screen and (max-width: 768px){
+    right: 250px;
+    bottom: 0;
+}
+
+@media screen and (max-width: 426px){
+    right: 125px;
+    bottom: 0;
+}
+
+@media screen and (max-width: 370px){
+    right: 100px;
+    bottom: 0;
+}
 `
 
 export const Button = styled.button`

@@ -25,6 +25,24 @@ export const Form = styled.form`
   align-items: center;
   padding-top: 100px;
   padding-bottom: 50px;
+
+  @media screen and (max-width: 1024px){
+    width: 580px;
+    height: 300px;
+  }
+
+  @media screen and (max-width: 768px){
+    width: 580px;
+    height: 300px;
+  }
+
+  @media screen and (max-width: 426px){
+    width: 320px;
+  }
+
+  @media screen and (max-width: 320px){
+    width: 270px;
+  }
 `;
 
 export const Input = styled.input`
@@ -36,6 +54,16 @@ export const Input = styled.input`
   margin: 5px;
   box-sizing: border-box;
   width: 570px;
+
+  @media screen and (max-width: 768px){
+    width: 480px;
+  }
+
+  @media screen and (max-width: 426px){
+    width: 240px;
+    padding: 20px 20px 20px 20px;
+    font-size: 16px;
+  }
 `;
 
 export const Button = styled.button`
@@ -48,6 +76,12 @@ export const Button = styled.button`
   width: 320px;
   margin-top: 50px;
   margin-bottom: 100px;
+
+  @media screen and (max-width: 426px){
+    width: 150px;
+    padding: 10px 30px 10px 30px;
+    font-size: 16px;
+}
 `;
 
 export const Header = styled.h1`
@@ -55,10 +89,26 @@ export const Header = styled.h1`
   font-size: 24px;
   color: #0d4d5d;
   padding: 30px 200px 0px 200px;
+
+  @media screen and (max-width: 768px){
+    font-size: 24px;
+}
+
+@media screen and (max-width: 320px){
+    font-size: 18px;
+}
 `;
 
 export const Text = styled.p`
   font-size: 16px;
   color: #0d4d5d;
   padding: 30px 50px;
+
+  @media screen and (max-width: 768px){
+    font-size: 12px;
+}
+
+@media screen and (max-width: 320px){
+    font-size: 12px;
+}
 `;
